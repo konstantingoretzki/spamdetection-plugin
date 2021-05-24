@@ -23,7 +23,6 @@ browser.menus.create({
     contexts: ["all"]
 }, onCreated("Menu Entry"));
 
-// sendRemoveListener on closed conduit?
 
 browser.menus.onClicked.addListener(function (info, tab) {
     switch (info.menuItemId) {
@@ -43,7 +42,7 @@ browser.menus.onClicked.addListener(function (info, tab) {
                         browser.messages.getRaw(message.id).then(function (result) {
                             console.log(`result`, result);
 
-                            // get url from the options field
+                            // get url (set via options field) from the storage
                             const gettingStoredSettings = browser.storage.local.get();
                             gettingStoredSettings
                                 .then(storage => {
@@ -66,8 +65,7 @@ browser.menus.onClicked.addListener(function (info, tab) {
                                                 return bodyText;
                                             })
                                             .then(bodyText => {
-                                                // change the text of the body
-                                                // also change the bg color depending on the context
+                                                // spawn notification containing the spam / ham prediction of the HTML response
                                                 notify(bodyText)
                                             })
                                             .catch(() => {
@@ -90,6 +88,5 @@ browser.menus.onClicked.addListener(function (info, tab) {
                 });
             });
 
-        // break;
     }
 })
