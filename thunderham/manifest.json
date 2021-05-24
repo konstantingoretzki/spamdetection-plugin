@@ -1,0 +1,40 @@
+{
+    "name": "Thunderham",
+    "description": "Addon to check mails for spam.",
+    "version": "2",
+    "applications": {
+      "gecko": {
+        "id": "goretzko@hs-albsig.de",
+        "strict_min_version": "76.0a1"
+      }
+    },
+    "icons": {
+      "96": "icons/ham.svg",
+      "64": "icons/ham.svg",
+      "48": "icons/ham.svg",
+      "32": "icons/ham.svg",
+      "16": "icons/ham.svg"
+    },
+    "permissions": [
+      "messagesRead",
+      "storage",
+      "menus",
+      "notifications"
+    ],
+    "background": {
+      "scripts": [
+        "background.js",
+        "helpers.js"
+      ]
+    },
+    "options_ui": {
+        "page": "options/options.html",
+        "browser_style": true
+    },
+    "message_display_action": {
+      "default_popup": "popup/popup.html",
+      "default_title": "Thunderham",
+      "default_icon" : "icons/ham.svg"
+    },
+    "manifest_version": 2
+  }
