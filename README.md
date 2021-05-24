@@ -2,12 +2,11 @@
 
 Thunderham is the companion Add-on for Mozilla Thunderbird 78+ to our security analytics project.
 The goal of our project was to be able to detect whether emails are spam or ham (not spam) using a machine learning model.
-While there is a webinterface to upload emails and check them, this Add-on simplifies the analysis for Mozilla Thunderbird.
+While there is a web interface to upload emails and check them, this Add-on simplifies the analysis for Mozilla Thunderbird.
 
-Please note that the webinterface is still needed. This Add-on should just help checking your mails so that a manual export of the mails as .eml-files is not needed because the mail gets automatically transfered. Also keep in mind that selecting multiple emails is not supported.
+Please note that the web interface is still needed. This Add-on should just help checking your mails so that a manual export of the mails as `.eml`-files is not needed because the mail gets automatically transferred. Also, please keep in mind that selecting multiple emails is not supported.
 
 ## Usage
-
 Emails can be checked via the message list or the mail view.
 
 ### Message list
